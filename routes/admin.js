@@ -6,7 +6,7 @@ var books = require('./../models/books');
 const title = process.env.TITLE;
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  const URL = 'mongodb://ebuka:2I5fBT5nLyeDcvGnOiVeHgdecsStzqE2a21FI7uuEz2d83HQQzXBHygPiaElDJz69hdQ2sdVV48TnrBA5h4oWQ==@ebuka.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@ebuka@';
+  const URL = process.env.URL;
   const dbName = 'Library';
   (async function mongo() {
     let client;
