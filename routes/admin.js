@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var { MongoClient } = require('mongodb');
+var {MongoClient} = require('mongodb');
 
+const title = process.env.TITLE;
 const books = [
   {
     title: 'War and Peace',
@@ -52,20 +53,20 @@ const books = [
     genre: 'Biography',
     author: 'Lev Nikolayevich Tolstoy',
     read: false
-  }]
-const title = process.env.TITLE;
+  }];
+
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', function(req, res, next) {
   const URL = process.env.URL;
   const dbName = 'Library';
-  (async function mongo() {
+  (async function mongo(){
     let client;
-    try {
+    try{
       client = await MongoClient.connect(URL);
-      const db = client.db(dbName);
+      const db=client.db(dbName);
       const response = await db.collection('books').insertMany(books);
       res.json(response);
-    } catch (err) {
+    }catch(err){
       console.log(err);
     }
   }());

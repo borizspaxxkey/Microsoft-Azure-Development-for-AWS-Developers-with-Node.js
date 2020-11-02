@@ -12,12 +12,12 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "mongodb": "^3.6.2",
+    "mongodb": "^3.5.3",
     "morgan": "~1.9.1",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.2"
   },
-  "nodemonConfig":{
-    "env":{
+  "nodemonConfig": {
+    "env": {
       "URL":"mongodb://ebuka:2I5fBT5nLyeDcvGnOiVeHgdecsStzqE2a21FI7uuEz2d83HQQzXBHygPiaElDJz69hdQ2sdVV48TnrBA5h4oWQ==@ebuka.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@ebuka@"
     }
   }
