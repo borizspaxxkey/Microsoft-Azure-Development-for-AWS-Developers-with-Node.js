@@ -1,4 +1,6 @@
-module.exports.books = [
+module.exports.books = books;
+
+const books = [
   {
     title: 'War and Peace',
     genre: 'Historical Fiction',
