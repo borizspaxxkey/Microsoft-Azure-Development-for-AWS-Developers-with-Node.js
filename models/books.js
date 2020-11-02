@@ -1,4 +1,4 @@
-export const books = [
+module.exports.books = [
   {
     title: 'War and Peace',
     genre: 'Historical Fiction',
