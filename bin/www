@@ -7,6 +7,7 @@ const appInsights = require('applicationinsights');
 appInsights.setup('d8749b45-247b-46aa-9302-272f4d4d01b3');
 appInsights.start();
 let start = Date.now();
+
 var app = require('../app');
 var debug = require('debug')('azureapp:server');
 var http = require('http');
@@ -91,5 +92,5 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
   let duration = Date.now() - start;
-  appInsights.defaultClient.trackMetric({ name: 'StartupTime', value: duration })
+  appInsights.defaultClient.trackMetric({ name: 'StartupTime', value: duration });
 }
