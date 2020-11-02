@@ -5,3 +5,5 @@ install dependencies: > npm install
 run the app: > SET DEBUG=azureapp:\* & npm start
 
 az webapp log tail --name AzureNodeApp1 --resource-group DemoApp
+
+https://azurenodeapp1.azurewebsites.net/
